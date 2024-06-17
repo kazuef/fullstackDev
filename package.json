@@ -1,0 +1,19 @@
+{
+  "name": "react-nginx-nodejs-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node app/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazuef/fullstackDev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kazuef/fullstackDev/issues"
+  }
+}
