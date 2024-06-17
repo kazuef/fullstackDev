@@ -15,5 +15,8 @@
   },
   "bugs": {
     "url": "https://github.com/kazuef/fullstackDev/issues"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
