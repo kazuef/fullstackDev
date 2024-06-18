@@ -16,7 +16,7 @@ const customers = [
     { title: "安藤", id: 5 },
 ];
 
-//データを取得できるようにしよう(GETメソッド)
+// データを取得できるようにしよう(GETメソッド)
 app.get("/api/customers", (req, res) => {
     res.send(customers);
 });
@@ -24,4 +24,14 @@ app.get("/api/customers", (req, res) => {
 app.get("/api/customers/:id", (req, res) => {
     const customer = customers.find((c) => c.id === parseInt(req.params.id));
     res.send(customer);
+});
+
+// データを送信（作成）してみよう(POSTメソッド)
+app.post("/api/customers", (req, res) => {
+    const customer = {
+        title: req.body.title,
+        id: customers.length + 1,
+    };
+    customers.push(customer);
+    res.send(customers);
 });
