@@ -15,6 +15,7 @@ const customers = [
     { title: "橋本", id: 3 },
     { title: "鈴木", id: 4 },
     { title: "安藤", id: 5 },
+    { title: "山田", id: 6 }
 ];
 
 // データを取得できるようにしよう(GETメソッド)

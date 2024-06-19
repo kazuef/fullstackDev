@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node app/index.js"
+    "dev": "node app/index.js",
+    "nodemon": "nodemon app/index.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
     "url": "https://github.com/kazuef/fullstackDev/issues"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3"
   }
 }
