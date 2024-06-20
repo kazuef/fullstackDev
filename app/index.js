@@ -2,10 +2,10 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
-app.listen(3000, console.log("サーバーが開始されました"));
+app.listen(80, console.log("サーバーが開始されました"));
 
 app.get("/", (req, res) => {
-    res.send("プログラミングチュートリアルへようこそ");
+    res.send({ title: "プログラミングチュートリアルへようこそ" });
 });
 
 // お客様情報をサーバーに置いておく
