@@ -18,6 +18,7 @@
     "url": "https://github.com/kazuef/fullstackDev/issues"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "nodemon": "^3.1.3"
   }
