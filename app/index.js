@@ -1,4 +1,5 @@
 const express = require("express");
+const mysql = require("mysql");
 const app = express();
 const cors = require("cors");
 app.use(express.json());
@@ -19,6 +20,14 @@ const customers = [
     { title: "安藤", id: 5 },
     { title: "山田", id: 6 }
 ];
+
+// データベースと接続
+const connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "customer_info"
+});
 
 // データを取得できるようにしよう(GETメソッド)
 app.get("/api/customers", (req, res) => {
