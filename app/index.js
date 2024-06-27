@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const mysql = require("mysql");
 const app = express();
@@ -22,16 +23,35 @@ const customers = [
 ];
 
 // データベースと接続
-const connection = mysql.createConnection({
+const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 });
 
+db.connect((err) => {
+    if (err) {
+        console.log('error connecting: ' + err.stack);
+        return;
+    }
+    console.log('success');
+});
+// ここまで データベースと接続 
+
 // データを取得できるようにしよう(GETメソッド)
 app.get("/api/customers", (req, res) => {
     res.send(customers);
+
+    // DB接続テスト
+    db.query(
+        'SELECT * FROM ' + process.env.DB_NAME,
+        (error, results) => {
+            console.log(results);
+            res.send('接続成功！');
+        }
+    );
+
 });
 
 app.get("/api/customers/:id", (req, res) => {
