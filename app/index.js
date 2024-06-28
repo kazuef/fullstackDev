@@ -45,7 +45,7 @@ app.get("/api/customers", (req, res) => {
 
     // DB接続テスト
     db.query(
-        'SELECT * FROM ' + process.env.DB_NAME,
+        'SELECT * FROM customer_info;',
         (error, results) => {
             console.log(results);
             res.send('接続成功！');
